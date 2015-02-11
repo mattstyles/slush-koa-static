@@ -2,20 +2,19 @@
  * <%= appName %>
  */
 
-var path        = require( 'path' ),
+var path        = require( 'path' );
 
-    koa         = require( 'koa' ),
-    logger      = require( 'koa-logger' ),
-    serve       = require( 'koa-static' ),
-    route       = require( 'koa-route' ),
-    mount       = require( 'koa-mount' ),
+var koa         = require( 'koa' );
+var logger      = require( 'koa-logger' );
+var serve       = require( 'koa-static' );
+var route       = require( 'koa-route' );
+var mount       = require( 'koa-mount' );
 
-    render      = require( './util/views' ),
+var render      = require( './util/views' );
 
-    app;
+<% if ( pkgUrl ) { %>var <%= pkgName %> = require( '<%= pkgName %>' );<% } %>
 
-
-app = koa();
+var app = koa();
 
 app.use( logger() );
 
@@ -34,7 +33,7 @@ app.use( function *( next ) {
 
 
 // Serve the frontend
-app.use( serve( path.join( __dirname, '../public' ) ) );
+<% if ( pkgUrl ) { %>app.use( serve( <%= pkgName %> ) );<% } else { %>app.use( serve( path.join( __dirname, '../public' ) ) );<% } %>
 
 
 // Export composable app

@@ -76,6 +76,9 @@ gulp.task( 'default', function( done ) {
         message: 'What is the github username?',
         default: defaults.userName
     }, {
+        name: 'pkgUrl',
+        message: 'What is the url of the public package?'
+    }, {
         type: 'confirm',
         name: 'continue',
         message: 'Continue?',
@@ -87,9 +90,17 @@ gulp.task( 'default', function( done ) {
             return done();
         }
 
+        if ( answers.pkgUrl ) {
+            answers.pkgName = answers.pkgUrl.replace( /\-(.+)tgz$/g, '' ).split( '/' ).pop();
+        }
+
         var templates = [
             path.join( __dirname, 'templates/**' )
         ];
+
+        if ( !answers.pkgUrl ) {
+            templates.push( path.join( __dirname, 'public-templates/**' ) );
+        }
 
         // Start scaffold
         return gulp.src( templates )

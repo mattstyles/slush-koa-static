@@ -14,6 +14,7 @@
   "repository": "git://github.com/<%= authorName %>/<%= appName %>.git",
   "license": "WTFPL",
   "dependencies": {
+    <% if ( pkgUrl ) { %>"<%= pkgName %>": "<%= pkgUrl %>",<% } %>
     "co-body": "^1.0.0",
     "co-views": "^0.3.0",
     "hogan.js": "^3.0.2",
