@@ -43,8 +43,8 @@ var defaults = (function () {
 
     return {
         appName: workingDirName,
-        userName: format( user.name ) || osUserName,
-        authorEmail: user.email || ''
+        userName: user.name ? format( user.name ) : osUserName,
+        authorEmail: user.email ? user.email : ''
     };
 })();
 
