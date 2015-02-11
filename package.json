@@ -1,0 +1,56 @@
+{
+  "name": "slush-koa-static",
+  "description": "Scaffold for a super simple koa-backed static server",
+  "version": "1.0.0",
+  "homepage": "https://github.com/mattstyles/slush-koa-static",
+  "author": {
+    "name": "Matt Styles",
+    "email": "matt@veryfizzyjelly.com",
+    "url": "https://github.com/mattstyles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattstyles/slush-koa-static.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mattstyles/slush-koa-static/issues"
+  },
+  "licenses": [
+    {
+      "type": "WTFPL",
+      "url": "https://github.com/mattstyles/slush-koa-static/blob/master/LICENSE"
+    }
+  ],
+  "main": "slushfile.js",
+  "engines": {
+    "node": ">= 0.10.26",
+    "npm": ">=1.4.3"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test tape test/*.js"
+  },
+  "dependencies": {
+    "gulp": "^3.6.2",
+    "gulp-conflict": "^0.1.1",
+    "gulp-if": "^1.2.5",
+    "gulp-install": "^0.1.4",
+    "gulp-load-plugins": "^0.8.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-template": "^0.1.1",
+    "gulp-util": "^3.0.3",
+    "iniparser": "^1.0.5",
+    "inquirer": "^0.4.1",
+    "slush": ">=1.0.0"
+  },
+  "keywords": [
+    "slushgenerator",
+    "koa",
+    "scaffold",
+    "hogan"
+  ],
+  "devDependencies": {
+    "mkdirp": "^0.5.0",
+    "mock-gulp-dest": "^0.1.1",
+    "tape": "^3.5.0"
+  }
+}

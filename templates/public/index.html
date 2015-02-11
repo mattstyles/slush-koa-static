@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= appName %></title>
+    <style media="screen">
+        body {
+            margin: 0;
+            padding: 60px;
+            font-family: 'Helvetica Neue', 'Helvetica', 'Lucida Grande', Tahoma, 'Droid Sans', sans-serif;
+            font-size: 15px;
+            color: #282828;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 62px;
+            color: #33333d;
+        }
+
+        p {
+            margin: 0;
+            font-size: 19px;
+            color: #444;
+        }
+
+        .heart {
+            display: inline-block;
+            transform: scale3d( .8, .8, 1 );
+            color: #96281B;
+            font-size: 21px;
+        }
+
+        .heart:hover {
+            animation: heartbeat .6667s infinite;
+            -webkit-animation: heartbeat .6667s infinite;
+        }
+
+        .meyer {
+            color: #663399;
+        }
+
+        @keyframes heartbeat {
+            0%   {
+                transform: scale3d( .8, .8, 1 );
+                color: #96281b;
+            }
+            100% {
+                transform: scale3d( 1, 1, 1 );
+                color: #d91e18;
+            }
+        }
+        @-webkit-keyframes heartbeat {
+            0%   {
+                -webkit-transform: scale3d( .8, .8, 1 );
+                color: #96281b;
+            }
+            100% {
+                -webkit-transform: scale3d( 1, 1, 1 );
+                color: #d91e18;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+    <p>With <span class="heart">❤</span> from <span class="meyer"><%= appName %></span></p>
+</body>
+</html>
