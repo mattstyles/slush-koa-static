@@ -26,6 +26,12 @@ slush koa-static
 npm run start
 ```
 
+## Generator Features
+
+### npm packaged public folder
+
+Feel like spicing it up? Got your public files all ready to go in an npm package created with `npm pack`? No probably, give the generator the url when prompted and it’ll build it right in
+
 
 ## Contributing
 

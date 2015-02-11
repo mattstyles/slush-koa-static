@@ -1,7 +1,7 @@
 {
   "name": "slush-koa-static",
   "description": "Scaffold for a super simple koa-backed static server",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/mattstyles/slush-koa-static",
   "author": {
     "name": "Matt Styles",
