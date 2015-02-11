@@ -34,8 +34,10 @@ var defaults = (function () {
         user = iniparser.parseSync( configFile ).user;
 
         if ( !user ) {
-            user.name = null;
-            user.email = null;
+            user = {
+                name: null,
+                email: null
+            };
         }
     }
 
