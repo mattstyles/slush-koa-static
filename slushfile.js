@@ -31,7 +31,11 @@ var defaults = (function () {
         user = {};
     if ( fs.existsSync( configFile ) ) {
         user = iniparser.parseSync( configFile ).user;
+    } else {
+        user.name = null;
+        user.email = null;
     }
+
     return {
         appName: workingDirName,
         userName: format( user.name ) || osUserName,
