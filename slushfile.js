@@ -79,6 +79,15 @@ gulp.task( 'default', function( done ) {
         name: 'pkgUrl',
         message: 'What is the url of the public package?'
     }, {
+        type: 'list',
+        name: 'logging',
+        message: 'What sort of logging will you support?',
+        choices: [
+            'koa-logger',
+            'koa-logging',
+            'koa-bunyan-logger'
+        ]
+    }, {
         type: 'confirm',
         name: 'continue',
         message: 'Continue?',
